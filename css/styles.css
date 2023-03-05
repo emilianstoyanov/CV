@@ -2502,6 +2502,8 @@ textarea.form-control-lg {
 }
 .form-check-input:checked {
   background-color: #bd5d38;
+  
+
   border-color: #bd5d38;
 }
 .form-check-input:checked[type=checkbox] {
@@ -11349,8 +11351,8 @@ p.lead {
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
+    max-width: 15rem;
+    max-height: 15rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
   }
   #sideNav .navbar-collapse {
