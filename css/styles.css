@@ -11431,7 +11431,3 @@ a{
 }
 
 
-<a href="file:///C:/Users/emili/Downloads/CV%20Emilian%20Stoyanov.pdf" download>Download PDF</a>
-a[download][href$=".pdf"]::after {
-  background-image: url("../assets/pdf.png");
-}
