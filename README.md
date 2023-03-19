@@ -1,11 +1,14 @@
 ### Emilian Stoyanov's CV  > https://emilianstoyanov.github.io/CV/
 
-## `First step:` Create a new repository with your name. Put github.io at the end. This is how you create a repository that will be hosted by GitHub.
+## `1.First step:` Create a new repository with your name. Put github.io at the end. This is how you create a repository that will be hosted by GitHub.
 
 
 ![image](https://user-images.githubusercontent.com/68276889/226181175-80df7afb-de0a-485b-9691-440f1c5d43b5.png)
 
+## `2.Second step:` Upload the template to the repository. A file named index.html will be previewed.
 
+
+![image](https://user-images.githubusercontent.com/68276889/226181729-95201a6b-298b-45dd-a8e3-bf1d40e0feae.png)
 
 
 
