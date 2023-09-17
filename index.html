@@ -33,6 +33,8 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#courses">Courses</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#hobbies">Hobbies</a></li> 
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#languages">Languages</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact Me</a></li>
+
                 </ul>
             </div>
         </nav>
@@ -49,7 +51,6 @@
                             Bulgaria · Sofia ·
                         <a href="mailto:emilian.stoyanov@outlook.com">emilian.stoyanov@outlook.com</a>  
                     </div>
-                    <!-- <a href="file:///C:/Users/emili/Downloads/CV%20Emilian%20Stoyanov.pdf" download>📥 Download my CV</a> -->
                     <p class="lead mb-5">I consider myself a very ambitious, motivated, career-oriented person, willing to accept challenges. Excellent problem solving, analytical and leadership skills and ability to perform independently or as part of a team.</p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://linkedin.com/in/e-stoyanov/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
@@ -102,6 +103,9 @@
                     <ul class="fa-ul mb-0">
                         <li class="mb-2 module">
                             <h3>
+                                <img src="https://th.bing.com/th/id/OIP.3KPNc09euMSFTwCvWOU0_wHaHa?pid=ImgDet&rs=1" alt="#projects" width="28" height="28">
+                                <a href="https://github.com/emilianstoyanov/python-blog" target="_blank">Python Blog</a>
+
                                 <img src="https://cdn.pixabay.com/photo/2016/03/31/19/50/checklist-1295319_1280.png" alt="" width="50" height="50">
                                 <a href="https://github.com/emilianstoyanov/Django-To-Do-List-App" target="_blank">To Do List</a>
                             </h3>
@@ -115,6 +119,14 @@
                                 <a href="https://github.com/emilianstoyanov/python-blog" target="_blank">Python Blog </a>
                             </h3>
                             <p>Django, Python, PostgreSQL</p>
+                        </li>
+
+                        <li class="mb-2 module">
+                            <h3>
+                                <img src="https://cdn-icons-png.flaticon.com/512/5845/5845526.png" alt="#projects" width="28" height="28">
+                                <a href="https://github.com/emilianstoyanov/Blockchain-App-Web3.0" target="_blank">Blockchain app web 3.0</a>
+                            </h3>
+                            <p>React, Smart Contract, Crypto, Ethereum</p>
                         </li>
                     </ul>
                     <ul class="fa-ul mb-0">
@@ -366,38 +378,10 @@
 
                         </ul>
                     </div>
-                           <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                           <script type="text/javascript">
-                           google.charts.load("current", {packages:["corechart"]});
-                           google.charts.setOnLoadCallback(drawChart);
-                           function drawChart() {
-                               var data = google.visualization.arrayToDataTable([
-                                       ['Task', 'Hours per Day'],
-                                       ['Work',     11],
-                                       ['Eat',      2],
-                                       ['Commute',  2],
-                                       ['Watch TV', 2],
-                                       ['Sleep',    7]
-                                       ]);
-                               
-                                       var options = {
-                                       title: 'My Daily Activities',
-                                       is3D: true,
-                                       };
-                                       var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-                                       chart.draw(data, options);
-                                   }
-                                   </script>
-                               </head>
-                               <body>
-                           <div id="piechart_3d" style="width: 500px; height: 300px;"></div> -->
-       
-                        
-                    
-                 </div>
-            </section> 
-            <hr class="m-0" /> 
-            <!-- Languages--> 
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Languages-->
             <section class="resume-section" id="languages">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Languages</h2>
@@ -423,5 +407,60 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+  
+
+        <div class="container" id="contact">
+            <h2 class="mb-5">Contact Me</h2>
+            
+            <form name="submit-to-google-sheet">
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="Name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="Email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="Message" required></textarea>
+    
+                <button type="submit" class="btn btn2">Submit</button>
+
+                <div id="msg"></div>
+            </form>
+        </div>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyDBE8kGQxk1T2hRvbX9eQfb3g3QRTLYhUvvgbsezivEGvkVrZSwkzgt3RBduR4AseJHQ/exec'
+
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message send successfully!"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+               
+            })
+        </script>
+        <script>
+                document.forms['submit-to-google-sheet'].addEventListener('submit', function(event) {
+                // Prevent the form from actually submitting (which would cause a page reload)
+                event.preventDefault();
+
+                // Reset the form fields
+                document.forms['submit-to-google-sheet']['Name'].value = '';
+                document.forms['submit-to-google-sheet']['Email'].value = '';
+                document.forms['submit-to-google-sheet']['Message'].value = '';
+            });
+        </script>
+    <div style="height: 100px;"></div>
+    <div class="extra-space"></div>
     </body>
 </html>
