@@ -11431,3 +11431,20 @@ ol li{
 a{
   text-decoration: none;
 }
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+input[type="submit"]:hover {
+  background-color: #bd5d38;
+  /* background-color: 189, 93, 56; */
+  
+}

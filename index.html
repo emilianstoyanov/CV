@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -33,6 +35,8 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#courses">Courses</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#hobbies">Hobbies</a></li> 
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#languages">Languages</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Contact us">Contact Us</a></li>
+
                 </ul>
             </div>
         </nav>
@@ -418,6 +422,58 @@
                 </div>
             </section>
             <hr class="m-0" />
+             <!-- Contact us--> 
+             <section class="resume-section" id="Contact us">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Contact Us</h2>
+                    <form name="submit-to-google-sheet">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="Name" required><br>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="Email" required><br>
+                        
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="Message" rows="4" cols="50" required></textarea><br>
+                        
+                        <input type="submit" value="Submit">
+                    </form>
+                       
+                </div>
+                <!-- </div> -->
+            </section>
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbyDBE8kGQxk1T2hRvbX9eQfb3g3QRTLYhUvvgbsezivEGvkVrZSwkzgt3RBduR4AseJHQ/exec'
+    
+                const form = document.forms['submit-to-google-sheet']
+                const msg = document.getElementById("msg")
+    
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        msg.innerHTML = "Message send successfully!"
+                        setTimeout(function(){
+                            msg.innerHTML = ""
+                        },5000)
+                        form.reset()
+                    })
+                    .catch(error => console.error('Error!', error.message))
+    
+                })
+            </script>
+            <script>
+                    document.forms['submit-to-google-sheet'].addEventListener('submit', function(event) {
+                    // Prevent the form from actually submitting (which would cause a page reload)
+                    event.preventDefault();
+    
+                    // Reset the form fields
+                    document.forms['submit-to-google-sheet']['Name'].value = '';
+                    document.forms['submit-to-google-sheet']['Email'].value = '';
+                    document.forms['submit-to-google-sheet']['Message'].value = '';
+                });
+            </script>
+
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
