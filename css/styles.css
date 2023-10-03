@@ -11432,7 +11432,7 @@ a{
   text-decoration: none;
 }
 
-<<<<<<< HEAD
+
 input[type="text"],
 input[type="email"],
 textarea {
@@ -11448,8 +11448,6 @@ input[type="submit"]:hover {
   background-color: #bd5d38;
   /* background-color: 189, 93, 56; */
   
-=======
-
 /* contact form */
 
 .container {
@@ -11507,5 +11505,5 @@ button[type="submit"] {
   font-size: 16px;
   text-align: center;
   margin-top: 10px;
->>>>>>> a445057ab2eb324f74a9024065ae1bca208259ad
+
 }
