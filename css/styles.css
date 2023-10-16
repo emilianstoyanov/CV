@@ -42,7 +42,12 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   /* navbar background color*/
-  --bs-primary-rgb: 189, 93, 56;
+  /* old */
+  /* --bs-primary-rgb: 189, 93, 56; */
+  /* --bs-primary-rgb: 101, 110, 239; */
+  --bs-primary-rgb: 52, 76, 233;
+
+
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -237,7 +242,7 @@ sup {
 }
 
 a {
-  color: #bd5d38;
+  /* color: #bd5d38; */
   text-decoration: underline;
 }
 a:hover {
@@ -2502,10 +2507,10 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 0.25rem rgba(189, 93, 56, 0.25);
 }
 .form-check-input:checked {
-  background-color: #bd5d38;
+  background-color: #eeeae8;
   
 
-  border-color: #bd5d38;
+  border-color: #ebe7e6;
 }
 .form-check-input:checked[type=checkbox] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
@@ -2593,6 +2598,7 @@ textarea.form-control-lg {
   height: 1rem;
   margin-top: -0.25rem;
   background-color: #bd5d38;
+
   border: 0;
   border-radius: 1rem;
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2622,6 +2628,7 @@ textarea.form-control-lg {
   width: 1rem;
   height: 1rem;
   background-color: #bd5d38;
+
   border: 0;
   border-radius: 1rem;
   -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3029,13 +3036,14 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #000;
-  background-color: #bd5d38;
+  background-color: #7a9ff0;
+
   border-color: #bd5d38;
 }
 .btn-primary:hover {
   color: #000;
-  background-color: #c77556;
-  border-color: #c46d4c;
+  background-color: #5661c7;
+  border-color: #5661c7;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #000;
@@ -3053,7 +3061,7 @@ textarea.form-control-lg {
 }
 .btn-primary:disabled, .btn-primary.disabled {
   color: #000;
-  background-color: #bd5d38;
+  background-color: #bd5d38; 
   border-color: #bd5d38;
 }
 
@@ -11446,6 +11454,7 @@ textarea {
 
 input[type="submit"]:hover {
   background-color: #bd5d38;
+  
   /* background-color: 189, 93, 56; */
   
 /* contact form */
